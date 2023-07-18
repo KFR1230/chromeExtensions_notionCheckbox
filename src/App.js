@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import NotionPage from './components/NotionPage';
 import './App.css';
+import SelectPage from './components/SelectPage';
+import { useEffect, useState } from 'react';
 
 function App() {
+  const [loginIn, setLoginIn] = useState(false);
+
+  useEffect(() => {
+    if (JSON.parse(localStorage.getItem('secrete'))) {
+      setLoginIn(true);
+    }
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App_container">
+        {loginIn ? (
+          <NotionPage setLoginIn={setLoginIn} />
+        ) : (
+          <SelectPage setLoginIn={setLoginIn} />
+        )}
+      </div>
     </div>
   );
 }
