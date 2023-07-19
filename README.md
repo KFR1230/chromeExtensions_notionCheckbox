@@ -22,21 +22,35 @@
 5. 到Chrome瀏覽器，輸入以下網址切換到擴充功能
   `chrome://extensions/`
 6. 在右上角將開發開發人員模式開啟
+
   !["開發人員模式"](public/開發人員模式.png)
+
 7. 點擊載入未封裝項目，選擇載入build檔案
+
   !["build"](public/build.png)
+
 8. 點擊右上擴充功能圖示，將剛剛載入的項目固定
+
   !["pin"](public/pin.png)
 
 ## Features 功能
 1. 到notion developers（`https://developers.notion.com/`）建立notion集合。
 2. 到特定資料庫點選右上三個點，選擇連線剛剛創建的集合。
+
   !["pin"](public/connections.png)
+
 3. 將notion集合ㄎ提供的secrete記錄下來
+
   !["pin"](public/secrete.png)
+
 4. 將notion網址查看database的ID記錄下來
+
   !["pin"](public/databaseId.png)
+
 5. 輸入secrete、databaseId
+
   !["pin"](public/登入頁.png)
+
 6. 成功頁面
+
   !["pin"](public/登入成功頁面.png)
