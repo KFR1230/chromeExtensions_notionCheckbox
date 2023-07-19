@@ -1,4 +1,8 @@
-import { getNotionBlockList, getNotionDb, postNotionLogin } from '../auth/page.js';
+import {
+  getNotionBlockList,
+  getNotionDb,
+  postNotionLogin,
+} from '../auth/page.js';
 import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NotionPagePro from './NotionPagePro.jsx';
@@ -26,11 +30,15 @@ function NotionPage(setLoginIn) {
   const [databaseId] = useState(secret.databaseId);
 
   const asyncPostNotionLogin = async () => {
+    if (currentProState !== 'fetching') {
+      return;
+    }
     try {
       const data = await postNotionLogin({
         secretKey: secretKey,
         databaseId: databaseId,
       });
+      asyncGetNotionDb();
     } catch (error) {
       console.log(error);
       setCurrentProState('failed');
@@ -41,11 +49,11 @@ function NotionPage(setLoginIn) {
     if (currentProState !== 'fetching') {
       return;
     }
+
     try {
       const data = await getNotionDb();
       // console.log(data)
       setPage(data.data.results[0]);
-      setCurrentProState('loaded');
     } catch (error) {
       console.log(error);
       setCurrentProState('failed');
@@ -61,6 +69,7 @@ function NotionPage(setLoginIn) {
       const data = await getNotionBlockList({ pageId: page?.id });
       setList(data.results);
       setCurrentConState('loaded');
+      setCurrentProState('loaded');
     } catch (error) {
       console.log(error);
       setCurrentConState('failed');
@@ -74,9 +83,13 @@ function NotionPage(setLoginIn) {
 
   useEffect(() => {
     asyncPostNotionLogin();
-    asyncGetNotionDb();
-    page && asyncGetNotionList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentProState, currentConState]);
+
+  useEffect(() => {
+    page && asyncGetNotionList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [page]);
 
   function switchListState(currentState) {
     switch (currentState) {
