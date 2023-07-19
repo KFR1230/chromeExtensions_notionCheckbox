@@ -30,4 +30,13 @@
 
 ## Features 功能
 1. 到notion developers（`https://developers.notion.com/`）建立notion集合。
-2. 
+2. 到特定資料庫點選右上三個點，選擇連線剛剛創建的集合。
+  !["pin"](public/connections.png)
+3. 將notion集合ㄎ提供的secrete記錄下來
+  !["pin"](public/secrete.png)
+4. 將notion網址查看database的ID記錄下來
+  !["pin"](public/databaseId.png)
+5. 輸入secrete、databaseId
+  !["pin"](public/登入頁.png)
+6. 成功頁面
+  !["pin"](public/登入成功頁面.png)
