@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'https://notion-checkbox-view-kfr.onrender.com';
+const baseUrl = 'https://colorful-uniform-worm.cyclic.app';
 
 export const postNotionLogin = async (payload) => {
   const { secretKey, databaseId } = payload;
