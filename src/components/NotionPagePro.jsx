@@ -51,6 +51,7 @@ const SectionPagePro = styled.section`
     bottom: 10px;
     left: 10px;
     min-width: 200px;
+    max-width:280px;
     min-height: 80px;
     padding: 5px;
     text-align: start;

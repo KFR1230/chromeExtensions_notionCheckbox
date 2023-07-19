@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const baseUrl = 'https://colorful-uniform-worm.cyclic.app';
+// https://notion-checkbox-view-kfr.onrender.com 因為休眠而導致在開啟時必須要３０s的restart時間
 
 export const postNotionLogin = async (payload) => {
   const { secretKey, databaseId } = payload;
@@ -30,7 +31,9 @@ export const getNotionDb = async () => {
 export const getNotionBlockList = async (payload) => {
   const { pageId } = payload;
   try {
-    const res = await axios.get(`${baseUrl}/getNotionBlockList/?page=${pageId}`);
+    const res = await axios.get(
+      `${baseUrl}/getNotionBlockList/?page=${pageId}`
+    );
     return res.data;
   } catch (error) {
     console.log('getNotionBlockList failed:', error);

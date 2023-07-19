@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+## Chrome Extensions-Notion Checkbox-view
+在Chrome提供的擴充功能中，查看特定資料庫，最新頁面的待辦清單。
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisites
+- Node.js 14.16.0
+- react 18.2.0
 
-## Available Scripts
+## Other Dependencies
+- axios 0.27.2
+- react-hook-form 7.45.1
+- styled-components 6.0.4
+- mui/material 5.14.0
 
-In the project directory, you can run:
+## Install and Execution
+1. 請確認有無下載Node.js 和 npm
+2. 將專案clone到本地，在終端機入以下指令
+`git clone https://github.com/KFR1230/chromeExtensions_notionCheckbox.git`
+3. 安裝node_modules，在終端機輸入以下指令
+  `npm install`
+4. 在終端機輸入以下指令，開啟專案
+  `npm build`
+5. 到Chrome瀏覽器，輸入以下網址切換到擴充功能
+  `chrome://extensions/`
+6. 在右上角將開發開發人員模式開啟
+  !["開發人員模式"](public/開發人員模式.png)
+7. 點擊載入未封裝項目，選擇載入build檔案
+  !["build"](public/build.png)
+8. 點擊右上擴充功能圖示，將剛剛載入的項目固定
+  !["pin"](public/pin.png)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Features 功能
+1. 到notion developers（`https://developers.notion.com/`）建立notion集合。
+2. 
