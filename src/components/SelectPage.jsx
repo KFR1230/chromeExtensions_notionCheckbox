@@ -117,7 +117,7 @@ function SelectPage({ loginIn, setLoginIn }) {
     switch (currentSelectState) {
       case 'fetching':
         return (
-          <LoadingButton loading loadingIndicator="Loading…" variant="outlined">
+          <LoadingButton loading variant="outlined">
             Fetch data
           </LoadingButton>
         );

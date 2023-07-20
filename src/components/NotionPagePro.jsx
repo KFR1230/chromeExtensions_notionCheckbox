@@ -1,8 +1,9 @@
-import { Fab } from '@mui/material';
+import { Fab} from '@mui/material';
 import { pink } from '@mui/material/colors';
 import styled from 'styled-components';
 import CheckboxProperties from './CheckBoxProperties';
 import ClearIcon from '@mui/icons-material/Clear';
+import LoadingSkeleton from './Skeleton';
 const SectionPagePro = styled.section`
   position: relative;
   height: 120px;
@@ -69,7 +70,7 @@ const SectionPagePro = styled.section`
       overflow: hidden;
     }
     & .loading {
-      line-height: 70px;
+      height: 50px;
     }
     & .properties_top {
       display: flex;
@@ -113,7 +114,7 @@ function NotionPagePro(...props) {
       case 'failed':
         return <div>no files</div>;
       default:
-        return <div className="loading">Loading...</div>;
+        return <LoadingSkeleton/>;
     }
   }
 

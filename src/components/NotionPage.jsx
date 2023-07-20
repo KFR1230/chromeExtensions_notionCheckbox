@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NotionPagePro from './NotionPagePro.jsx';
 import CheckboxItem from './CheckBox.jsx';
+import LoadingSkeleton from './Skeleton.jsx';
 //styled-component 字首大寫
 const StyledNotionPage = styled.div`
   position: relative;
@@ -17,6 +18,7 @@ const StyledNotionPage = styled.div`
     height: calc(400px - 180px);
     overflow-y: auto;
     overflow-x: hidden;
+    
   }
 `;
 
@@ -116,7 +118,9 @@ function NotionPage(setLoginIn) {
         return <h1>no files.</h1>;
 
       default:
-        return <h1 className="loading">Loading...</h1>;
+        return (
+          <LoadingSkeleton/>
+        );
     }
   }
   return (
